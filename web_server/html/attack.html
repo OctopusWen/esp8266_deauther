@@ -12,11 +12,11 @@
 	</head>
 	<body>
 		<nav>
-			<a href="apscan.html">APs</a>
-			<a href="stations.html">Stations</a>
-			<a href="attack.html">Attacks</a>
-			<a href="settings.html">Settings</a>
-			<a class="right" href="info.html">Info</a>
+			<a href="apscan.html">Wi-Fi</a>
+			<a href="stations.html">接入点</a>
+			<a href="attack.html">攻击</a>
+			<a href="settings.html">设置</a>
+			<a class="right" href="info.html">关于</a>
 		</nav>
 		
 		<div class="container">
@@ -25,12 +25,12 @@
 					
 					<div id="error" class="hide"></div>
 					
-					<h1 class="header">Attacks</h1>
+					<h1 class="header">攻击</h1>
 					
-					<p class="bold">Selected AP(s): <button onclick='cloneSelected()'>clone</button></p>
+					<p class="bold">选择的Wi-Fi: <button onclick='cloneSelected()'>克隆</button></p>
 					<ul id="selectedAPs"></ul>
 					
-					<p class="bold">Selected Station(s):</p>
+					<p class="bold">选择的站:</p>
 					<ul id="selectedClients"></ul>
 					
 					<table></table>
@@ -39,12 +39,12 @@
 						<input type="number" id="randomIntrvl" value="5" min="1" max="65000"/>s
 					</label>
 					
-					<button class="right" id="randomBtn" onclick="random()">Enable Random</button>
+					<button class="right" id="randomBtn" onclick="random()">启用随机化</button>
 					
 					<p class="clear">
 						<br />
-						<span class="red">INFO: </span><span class="bold">You may loose connection when starting the attack.</span><br />
-						Change the channel in the settings to the same of the selected AP to prevent this.
+						<span class="red">信息: </span><span class="bold">当启动攻击的时候你可能会掉线.</span><br />
+						在设置中, 将信道更改为所选AP相同的信道, 以防止此情况
 					</p>
 					
 					<hr />
@@ -62,7 +62,7 @@
 			
 			<div class="row">
 				<div class="col-6">
-					<label for="num">Number of Clones</label>
+					<label for="num">克隆数量</label>
 				</div>
 				<div class="col-6">
 					<input type="number" id="num" min="0" max="48" value="0" />
@@ -71,7 +71,7 @@
 			
 			<div class="row">
 				<div class="col-6">
-					<label for="enc">Encrypted</label>
+					<label for="enc">是否加密信号</label>
 				</div>
 				<div class="col-6">
 					<input type="checkbox" id="enc" name="enc" />
@@ -88,33 +88,33 @@
 					<p class="left">SSIDs: <span id="ssidCounter">0/48</span></p>
 					
 					<div class="right">
-						<button class="red" onclick="clearSSID()">clear</button> 
-						<button onclick="randomSSID()">random</button> 
+						<button class="red" onclick="clearSSID()">清除</button> 
+						<button onclick="randomSSID()">随机</button> 
 					</div>
 
 					<table></table>
 					
-					<button class="marginNull red" onclick="resetSSID()">reset</button> 
-					<button class="marginNull button-primary right" onclick="saveSSID()">save</button> 
+					<button class="marginNull red" onclick="resetSSID()">重置</button> 
+					<button class="marginNull button-primary right" onclick="saveSSID()">保存</button> 
 					
-					<p class="small" id="saved">saved</p>
+					<p class="small" id="saved">已保存</p>
 					
 					<p>
 						<br />
-						<span class="bold">Deauth [deauthentication attack]:</span><br />
-						Sends constantly deauthentication and disassociation frames to the selected station(s) and access point(s).<br />
+						<span class="bold">拒绝认证服务 [deauthentication attack]:</span><br />
+						对选定的站点和接入点不断发送取消认证和关联帧. <br />
 						<br />
-						<span class="bold">Beacon [beacon flooding]:</span><br />
-						Broadcasts constantly beacon frames to advertise all SSIDs in the list below.<br />
+						<span class="bold">信标 [beacon flooding]:</span><br />
+						广播不间断的信标帧以在下面的列表中公布所有SSID.<br />
 						<br />
-						<span class="bold">Probe-Request [probe request flooding]:</span><br />
-						Broadcasts constantly probe request frames with all SSIDs in the list below.
+						<span class="bold">探测请求 [probe request flooding]:</span><br />
+						以下列表中的所有SSID都会广播不间断地探测请求帧.
 					</p>
 					
 					<div id="copyright">
 						Version 1.6<br />
 						Copyright (c) 2017 Stefan Kremser<br />
-						<a href="https://github.com/spacehuhn" target="_blank">github.com/spacehuhn</a>
+						<a href="https://github.com/spacehuhn" target="_blank">github.com/spacehuhn</a><br />
 					</div>
 					
 					<script src="js/attack.js"></script>

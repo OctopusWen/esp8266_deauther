@@ -12,11 +12,11 @@
 	</head>
 	<body>
 		<nav>
-			<a href="apscan.html">APs</a>
-			<a href="stations.html">Stations</a>
-			<a href="attack.html">Attacks</a>
-			<a href="settings.html">Settings</a>
-			<a class="right" href="info.html">Info</a>
+			<a href="apscan.html">Wi-Fi</a>
+			<a href="stations.html">接入点</a>
+			<a href="attack.html">攻击</a>
+			<a href="settings.html">设置</a>
+			<a class="right" href="info.html">关于</a>
 		</nav>
 		
 		<div class="container">
@@ -25,7 +25,7 @@
 					
 					<div id="error" class="hide"></div>
 					
-					<h1 class="header">Settings</h1>
+					<h1 class="header">设置</h1>
 					<h2>Wi-Fi</h2>
 				</div>
 			</div>
@@ -41,7 +41,7 @@
 			
 			<div class="row">
 				<div class="col-6">
-					<label for="password" class="labelFix">Password (<span class="red">min.8 chars</span>)</label>
+					<label for="password" class="labelFix">密码 (<span class="red">最少8个字符</span>)</label>
 				</div>
 				<div class="col-6">
 					<input type="text" id="password" minlength="8" maxlength="32">
@@ -50,7 +50,7 @@
 			
 			<div class="row">
 				<div class="col-6">
-					<label for="ssidHidden">Hide SSID (<span class="red">be careful with this setting!</span>)</label>
+					<label for="ssidHidden">隐藏 SSID (<span class="red">小心此选项!</span>)</label>
 				</div>
 				<div class="col-6">
 					<input type="checkbox" name="ssidHidden" id="ssidHidden" value="false">
@@ -59,7 +59,7 @@
 			
 			<div class="row">
 				<div class="col-6">
-					<label for="apChannel" class="labelFix">Channel</label>
+					<label for="apChannel" class="labelFix">信道</label>
 				</div>
 				<div class="col-6">
 					<input type="number" id="apChannel" min="1" max="14">
@@ -68,7 +68,7 @@
 			
 			<div class="row">
 				<div class="col-6">
-					<label for="apChannel" class="labelFix">MAC</label>
+					<label for="apChannel" class="labelFix">MAC地址</label>
 				</div>
 				<div class="col-6">
 					<input type="text" id="macAp" min="1" max="14">
@@ -77,7 +77,7 @@
 			
 			<div class="row">
 				<div class="col-6">
-					<label for="randMacAp" class="labelFix">Random MAC</label>
+					<label for="randMacAp" class="labelFix">MAC地址随机化</label>
 				</div>
 				<div class="col-6">
 					<input type="checkbox" name="randMacAp" id="randMacAp" value="false">
@@ -87,13 +87,13 @@
 			
 			<div class="row">
 				<div class="col-12">
-					<h2>AP Scan</h2>
+					<h2>Wi-Fi扫描</h2>
 				</div>
 			</div>
 			
 			<div class="row">
 				<div class="col-6">
-					<label for="apScanHidden">Scan Hidden APs</label>
+					<label for="apScanHidden">扫描隐藏Wi-Fi</label>
 				</div>
 				<div class="col-6">
 					<input type="checkbox" name="apScanHidden" id="apScanHidden" value="false">
@@ -102,7 +102,7 @@
 			
 			<div class="row">
 				<div class="col-6">
-					<label for="multiAPs">Select multiple SSIDs</label>
+					<label for="multiAPs">SSID 多选</label>
 				</div>
 				<div class="col-6">
 					<input type="checkbox" name="multiAPs" id="multiAPs" value="false">
@@ -118,7 +118,7 @@
 			
 			<div class="row">
 				<div class="col-6">
-					<label for="scanTime" class="labelFix">Default Scan Time</label>
+					<label for="scanTime" class="labelFix">默认扫描时间</label>
 				</div>
 				<div class="col-6">
 					<input type="number" id="scanTime" min="1" max="255"> s
@@ -128,13 +128,13 @@
 			
 			<div class="row">
 				<div class="col-12">
-					<h2>Attack</h2>
+					<h2>攻击</h2>
 				</div>
 			</div>
 			
 			<div class="row">
 				<div class="col-6">
-					<label for="timeout" class="labelFix">Timeout (0 = no timeout)</label>
+					<label for="timeout" class="labelFix">超时 (0 = 永不超时)</label>
 				</div>
 				<div class="col-6">
 					<input type="number" id="timeout" min="-1" max="65536"> s
@@ -143,7 +143,7 @@
 			
 			<div class="row">
 				<div class="col-6">
-					<label for="useLed">Use LED</label>
+					<label for="useLed">使用LED</label>
 				</div>
 				<div class="col-6">
 					<input type="checkbox" id="useLed" value="false">
@@ -152,7 +152,7 @@
 			
 			<div class="row">
 				<div class="col-6">
-					<label for="ledPin" class="labelFix">LED Pin</label>
+					<label for="ledPin" class="labelFix">LED 针脚</label>
 				</div>
 				<div class="col-6">
 					<input type="number" id="ledPin" min="0" max="18">
@@ -161,7 +161,7 @@
 			
 			<div class="row">
 				<div class="col-6">
-					<label for="beaconInterval">1s Beacon Interval (default: 100ms)</label>
+					<label for="beaconInterval">1s 信标间隔 (默认: 100ms)</label>
 				</div>
 				<div class="col-6">
 					<input type="checkbox" id="beaconInterval" value="false">
@@ -170,7 +170,7 @@
 			
 			<div class="row">
 				<div class="col-6">
-					<label for="deauthReason" class="labelFix">Deauth Reason-Code</label>
+					<label for="deauthReason" class="labelFix">拒绝认证服务原因代码</label>
 				</div>
 				<div class="col-6">
 					<input type="number" id="deauthReason" min="1" max="45">
@@ -179,7 +179,7 @@
 			
 			<div class="row">
 				<div class="col-6">
-					<label for="packetRate" class="labelFix">Packetrate (<span class="red">may cause instability!</span>)</label>
+					<label for="packetRate" class="labelFix">包速率 (<span class="red">可能会导致不稳定!</span>)</label>
 				</div>
 				<div class="col-6">
 					<input type="number" id="packetRate" min="1" max="50"> pkts/s
@@ -188,7 +188,7 @@
 			
 			<div class="row">
 				<div class="col-6">
-					<label for="multiAttacks">Enable Simultaneous Attacks</label>
+					<label for="multiAttacks">开启同时攻击</label>
 				</div>
 				<div class="col-6">
 					<input type="checkbox" id="multiAttacks" value="false">
@@ -197,7 +197,7 @@
 			
 			<div class="row">
 				<div class="col-6">
-					<label for="macInterval" class="labelFix">MAC Change Interval (used for beacons & probes)</label>
+					<label for="macInterval" class="labelFix">MAC更换间隔 (用于信标和探针)</label>
 				</div>
 				<div class="col-6">
 					<input type="number" id="macInterval" min="0" max="65000">s
@@ -218,9 +218,9 @@
 			<div class="row">
 				<div class="col-12">
 					<br />
-					<button class="red" onclick="resetSettings()">reset</button> 
-					<button class="red" onclick="restart()">restart</button> 
-					<button class="button-primary right" onclick="saveSettings()">save</button>
+					<button class="red" onclick="resetSettings()">重置</button> 
+					<button class="red" onclick="restart()">重启</button> 
+					<button class="button-primary right" onclick="saveSettings()">保存</button>
 					<br class="clear" />
 					<p id="saved"></p>
 					<br class="clear" />
@@ -228,7 +228,7 @@
 					<div id="copyright">
 						Version 1.6<br />
 						Copyright (c) 2017 Stefan Kremser<br />
-						<a href="https://github.com/spacehuhn" target="_blank">github.com/spacehuhn</a>
+						<a href="https://github.com/spacehuhn" target="_blank">github.com/spacehuhn</a><br />
 					</div>
 						
 					<script src="js/settings.js"></script>

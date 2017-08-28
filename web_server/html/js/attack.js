@@ -24,8 +24,8 @@ function getResults() {
     selectedAPs.innerHTML = aps;
     selectedClients.innerHTML = clients;
 	
-	if(res.randomMode == 1) randomBtn.innerHTML = "Disable Random";
-	else randomBtn.innerHTML = "Enable Random";
+	if(res.randomMode == 1) randomBtn.innerHTML = "关闭随机化";
+	else randomBtn.innerHTML = "开启随机化";
 
     for (var i = 0; i < res.attacks.length; i++) {
       if (res.attacks[i].running) tr += "<tr class='selected'>";
@@ -45,7 +45,7 @@ function getResults() {
 		data = res.ssid;
 		ssidCounter.innerHTML = data.length + "/48";
 		
-		var tr = "<tr><th>Name</th><th></th><th>Del.</th></tr>";
+		var tr = "<tr><th>名称</th><th></th><th>Del.</th></tr>";
 		for (var i = 0; i < data.length; i++) {
 		  tr += "<tr>";
 		  tr += "<td>" + escapeHTML(data[i][0]) + "</td>";
@@ -59,7 +59,7 @@ function getResults() {
 
   }, function() {
     clearInterval(resultInterval);
-    showMessage("error loading attackInfo.json");
+    showMessage("attackInfo.json 加载失败");
   });
 }
 
@@ -67,7 +67,7 @@ function startStop(num) {
   getResponse("attackStart.json?num=" + num, function(responseText) {
 	getE("status"+num).innerHTML = "loading";
     if (responseText == "true") getResults();
-    else showMessage("response error attackStart.json");
+    else showMessage("attackStart.json 响应错误");
   });
 }
 

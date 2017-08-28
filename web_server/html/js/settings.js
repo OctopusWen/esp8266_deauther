@@ -27,7 +27,7 @@ function getData() {
 	try {
         res = JSON.parse(responseText);
     } catch(e) {
-        showMessage("Error: reset the settings.");
+        showMessage("错误: 重置设置.");
 		return;
     }
 	ssid.value = res.ssid;
@@ -52,7 +52,7 @@ function getData() {
 }
 
 function saveSettings() {
-  saved.innerHTML = "saving...";
+  saved.innerHTML = "保存中...";
   var url = "settingsSave.json";
   url += "?ssid=" + ssid.value;
   url += "&ssidHidden=" + ssidHidden.checked;
@@ -76,9 +76,9 @@ function saveSettings() {
   getResponse(url, function(responseText) {
     if (responseText == "true") {
       getData();
-      saved.innerHTML = "saved";
+      saved.innerHTML = "已保存";
     }
-    else showMessage("response error settingsSave.json");
+    else showMessage("settingsSave.json 响应错误");
   });
 }
 
@@ -86,9 +86,9 @@ function resetSettings() {
   getResponse("settingsReset.json", function(responseText) {
     if (responseText == "true") {
       getData();
-      saved.innerHTML = "saved";
+      saved.innerHTML = "已保存";
     }
-    else showMessage("response error settingsReset.json");
+    else showMessage("settingsReset.json 响应错误");
   });
 }
 

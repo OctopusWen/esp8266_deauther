@@ -42,7 +42,7 @@ function getResults() {
 		
     var tr = '';
     if (res.aps.length > 0) {
-		tr += '<tr><th>Ch</th><th>SSID</th><th> </th><th>RSSI</th><th>Select</th></tr>';
+		tr += '<tr><th>Ch</th><th>SSID</th><th> </th><th>RSSI</th><th>选择</th></tr>';
 	}	
 	
     for (var i = 0; i < res.aps.length; i++) {

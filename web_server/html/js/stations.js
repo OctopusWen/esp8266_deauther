@@ -26,7 +26,7 @@ function getResults() {
 	try{
 		res = JSON.parse(responseText);
 	}catch(e){
-		showMessage("Error: clear the client list.");
+		showMessage("错误: 清除客户端列表.");
 		return;
 	}
     
@@ -72,7 +72,7 @@ function getResults() {
     nameListTable.innerHTML = tr;
 	
   }, function() {
-	  showMessage("reconnect and reload the site");
+	  showMessage("重新连接并重新加载页面");
   }, 6000);
 
 }
@@ -86,7 +86,7 @@ function scan() {
 			getResults();
 		}, scanTime.value * 1000);
 	}
-	else showMessage("response error ClientScan.json");
+	else showMessage("ClientScan.json 响应错误");
 	});
 }
 
@@ -100,14 +100,14 @@ function select(num) {
 function clearNameList() {
   getResponse("clearNameList.json", function(responseText) {
     if (responseText == "true") getResults();
-    else showMessage("response error clearNameList.json");
+    else showMessage("clearNameList.json 响应错误");
   });
 }
 
 function addClient(){
 	getResponse("addClient.json?mac="+cMac.value+"&name="+cName.value, function(responseText) {
 		if (responseText == "true") getResults();
-		else showMessage("response error addClient.json");
+		else showMessage("addClient.json 响应错误");
 	});
 }
 
@@ -117,7 +117,7 @@ function setName(id) {
   if (newName != null) {
     getResponse("setName.json?id=" + id + "&name=" + newName, function(responseText) {
       if(responseText == "true") getResults();
-      else showMessage("response error editNameList.json");
+      else showMessage("editNameList.json 响应错误");
     });
   }
 }
@@ -128,7 +128,7 @@ function editNameList(id) {
   if (newName != null) {
     getResponse("editNameList.json?id=" + id + "&name=" + newName, function(responseText) {
       if(responseText == "true") getResults();
-      else showMessage("response error editNameList.json");
+      else showMessage("editNameList.json 响应错误");
     });
   }
 }
@@ -136,14 +136,14 @@ function editNameList(id) {
 function deleteName(id) {
   getResponse("deleteName.json?num=" + id, function(responseText) {
     if (responseText == "true") getResults();
-    else showMessage("response error deleteName.json");
+    else showMessage("deleteName.json 响应错误");
   });
 }
 
 function add(id){
   getResponse("addClientFromList.json?num=" + id, function(responseText) {
     if (responseText == "true") getResults();
-    else showMessage("response error addClientFromList.json");
+    else showMessage("addClientFromList.json 响应错误");
   });
 }
 
