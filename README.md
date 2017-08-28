@@ -37,27 +37,27 @@
 The [ESP8266](https://en.wikipedia.org/wiki/ESP8266) 是一个廉价而易于使用的 Wi-Fi Soc(片上系统), 可以通过[Arduino IDE](https://www.arduino.cc/en/Main/Software)对其编程.  
 通过这个软件对ESP8266 刷写这个程序, 你可以选择一个目标网络进行不同的攻击.  
 
-如果连接易受攻击，则攻击会断开设备与网络的连接. 由于攻击不断运行，设备将被重新断开. 根据网络的不同，可以阻止连接或减慢连接速度.
+如果连接易受攻击, 则攻击会断开设备与网络的连接. 由于攻击不断运行, 设备将被重新断开. 根据网络的不同, 可以阻止连接或减慢连接速度.
 
 **干扰和拒绝认证服务的区别:** [WiFi Jammers vs Deauthers | What's The Difference?](https://www.youtube.com/watch?v=6m2vY2HXU60)  
 
 另外的攻击方案也已经实现, 如信标(beacon)和洪水请求探测.  
 
 通过利用802.11 Wi-Fi协议中的一个旧的和已知的漏洞攻击恶意攻击.
-因为[deauthentication frames](https://mrncciew.com/2014/10/11/802-11-mgmt-deauth-disassociation-frames/),通常用于安全地断开Wi-Fi连接，不加密，很容易对他们进行欺骗. 你只需要访问点的mac地址，就可以轻松地嗅探.
-如果你不想攻击所有连接的设备，您还可以扫描连接并进行针对攻击.  
+因为[deauthentication frames](https://mrncciew.com/2014/10/11/802-11-mgmt-deauth-disassociation-frames/),通常用于安全地断开Wi-Fi连接, 不加密, 很容易对他们进行欺骗. 你只需要访问点的mac地址, 就可以轻松地嗅探.
+如果你不想攻击所有连接的设备, 您还可以扫描连接并进行针对攻击.  
 
 **这东西合法吗** [WiFi Jammers/Deauthers | Legal?](https://www.youtube.com/watch?v=IromynQ1srI)  
 
 ### 如何保护自己防御它的攻击
 
-Wi-Fi协议通过[802.11w-2009](https://en.wikipedia.org/wiki/IEEE_802.11w-2009)成为加密管理(和去认证)帧. 这使得欺骗这些数据包的方式变得更加困难，这种形式的攻击无效.
-因此，请确保您的路由器是最新的，并启用了管理帧保护. 您的客户端设备(例如您的手机，笔记本电脑等)也需要支持. 连接的两端都需要使用它!
+Wi-Fi协议通过[802.11w-2009](https://en.wikipedia.org/wiki/IEEE_802.11w-2009)成为加密管理(和去认证)帧. 这使得欺骗这些数据包的方式变得更加困难, 这种形式的攻击无效.
+因此, 请确保您的路由器是最新的, 并启用了管理帧保护. 您的客户端设备(例如您的手机, 笔记本电脑等)也需要支持. 连接的两端都需要使用它!
 
-问题在于，大多数路由器默认使用未加密的管理帧，不提供任何更改权限的选项，也不提供有关此问题的任何信息.
-我测试了几个网络，没有一个网络不是脆弱的!
+问题在于, 大多数路由器默认使用未加密的管理帧, 不提供任何更改权限的选项, 也不提供有关此问题的任何信息.
+我测试了几个网络, 没有一个网络不是脆弱的!
 
-我使用相同的ESP8266创建了一个[Deauth Detector](https://github.com/spacehuhn/DeauthDetector)来显示大量的deauth帧. 它不能保护你，但它可以帮助你弄清楚攻击是否和何时发生.  
+我使用相同的ESP8266创建了一个[Deauth Detector](https://github.com/spacehuhn/DeauthDetector)来显示大量的deauth帧. 它不能保护你, 但它可以帮助你弄清楚攻击是否和何时发生.  
 
 ## 免责声明
 
@@ -66,20 +66,20 @@ ESP8266及其SDK都不是为此目的而设计或构建的.
 可能会发生错误!
 
 仅用于你自己的网络和设备!
-对于你使用此程序，我不承担任何责任.
+对于你使用此程序, 我不承担任何责任.
 
 使用前请检查您所在国家的法律规定.
-**这不是很多人所说的错误的频率干扰.**上面描述了它的攻击，它的工作原理以及如何防范它. 它使用官方802.11标准中描述的有效Wi-Fi帧，不会阻塞或中断任何频率.
+**这不是很多人所说的错误的频率干扰.**上面描述了它的攻击, 它的工作原理以及如何防范它. 它使用官方802.11标准中描述的有效Wi-Fi帧, 不会阻塞或中断任何频率.
 
 我对这个项目的意图是更多地关注这个问题.
-这种攻击显示了802.11 Wi-Fi标准的脆弱性，而且必须要修复.
-**一个解决方案已经存在，为什么我们不用它？**
+这种攻击显示了802.11 Wi-Fi标准的脆弱性, 而且必须要修复.
+**一个解决方案已经存在, 为什么我们不用它？**
 
-请不要把这个项目称为“干扰”，这完全破坏了这个项目的真正目的!
+请不要把这个项目称为"干扰", 这完全破坏了这个项目的真正目的!
 
 ## 支持的设备
 
-**你可以将该软件自动闪存到任何ESP8266 **上，但如果你希望支持我，您可以获得其中一个特别适用于此项目的开发板，并预先安装所有内容!
+**你可以将该软件自动闪存到任何ESP8266 **上, 但如果你希望支持我, 您可以获得其中一个特别适用于此项目的开发板, 并预先安装所有内容!
 
 - WiFi Deauther v1.5
 	- [AliExpress](https://goo.gl/JAXhTg)  
@@ -103,21 +103,22 @@ ESP8266及其SDK都不是为此目的而设计或构建的.
 
 **0** 下载最新的发布版[releases](https://github.com/spacehuhn/esp8266_deauther/releases)  
 
-始终使用1mb版本，除非您确定您的ESP8266只有512kb闪存.
-**注意：** 512kb版本不会有完整的Mac供应商列表.
+始终使用1mb版本, 除非您确定您的ESP8266只有512kb闪存.
 
-** 1 **使用你选择的ESP8266刷写工具上传：
+**注意: ** 512kb版本不会有完整的Mac供应商列表.
+
+**1**使用你选择的ESP8266刷写工具上传: 
 	- [nodemcu-flasher](https://github.com/nodemcu/nodemcu-flasher) [Windows only]  
 	- [esptool-gui](https://github.com/Rodmg/esptool-gui) [Windows, MacOS]  
 	- [esptool](https://github.com/espressif/esptool) [Windows, MacOS, Linux]  
 
 **就这样!**
 
-确保您的电路板的设置正确. 大多数板子有4mb闪存，有时你必须按住FLASH按钮，同时插入并保持它，直到刷写的过程开始.
+确保您的电路板的设置正确. 大多数板子有4mb闪存, 有时你必须按住FLASH按钮, 同时插入并保持它, 直到刷写的过程开始.
 
-还要确保选择正确的com端口，正确的上传大小（大多是4mb）和正确的.bin文件.
+还要确保选择正确的com端口, 正确的上传大小(大多是4mb)和正确的.bin文件.
 
-如果它不工作，可以尝试使用下面的方法.
+如果它不工作, 可以尝试使用下面的方法.
 
 ### 在ArduinoIDE编译源码
 
@@ -168,14 +169,14 @@ int wifi_send_pkt_freedom(uint8 *buf, int len, bool sys_seq);
 
 **15** 在Arduino内打开 `esp8266_deauther` > `esp8266_deauther.ino` 
 
-**16** 在 `工具` > `开发板` 选择你的Esp8266开发板，在 `Tools` > `Port` 选择正确的COM端口 
+**16** 在 `工具` > `开发板` 选择你的Esp8266开发板, 在 `Tools` > `Port` 选择正确的COM端口 
 如果没有任何端口显示, 你应该安装合适的驱动.
 
 **17** 根据你的开发板, 你可能需要调整 `工具` > `Flash Frequency` 和 `工具` > `Flash Size`. 使用 `160MHz` 运行频率和 `4M (3M SPIFFS)`.
 
 **18** 上传!
 
-**注意:** 如果您使用512kb版本的ESP8266，则需要注释掉data.h中的一部分mac供应商列表
+**注意:** 如果您使用512kb版本的ESP8266, 则需要注释掉data.h中的一部分mac供应商列表
 
 **你的ESP8266 Deauther现已准备就绪!**
 
@@ -183,8 +184,8 @@ int wifi_send_pkt_freedom(uint8 *buf, int len, bool sys_seq);
 
 ![image of the esp8266 deauther with an OLED and three buttons](https://raw.githubusercontent.com/spacehuhn/esp8266_deauther/master/screenshots/esp8266_with_oled.jpg)
 
-我在发布页面上包含2个额外的的.bin文件，用于显示版本。
-一个用于0.96 `SSD1306 OLED，一个用于1.3` SH1106 OLED。
+我在发布页面上包含2个额外的的.bin文件, 用于显示版本。
+一个用于0.96 `SSD1306 OLED, 一个用于1.3` SH1106 OLED。
 
 | Display | ESP8266 |
 | ------- | ------- |
@@ -193,7 +194,7 @@ int wifi_send_pkt_freedom(uint8 *buf, int len, bool sys_seq);
 | GND     | GND     |
 | VCC     | VCC (3.3V) |
 
-按钮必须位于以下引脚和GND之间：
+按钮必须位于以下引脚和GND之间: 
 
 | Button | ESP8266 |
 | ------ | ------- |
@@ -202,9 +203,9 @@ int wifi_send_pkt_freedom(uint8 *buf, int len, bool sys_seq);
 | select | 14 (D5) |
 
 
-如果你使用Arduino，则需要安装此库：https：//github.com/squix78/esp8266-oled-ssd1306。
+如果你使用Arduino, 则需要安装此库: https: //github.com/squix78/esp8266-oled-ssd1306。
 那么你只需要在草图的开头取消注释 `// #define USE_DISPLAY`。
-在此之下，您可以自定义设置：
+在此之下, 您可以自定义设置: 
 
 ```
   //create display(Adr, SDA-pin, SCL-pin)
@@ -223,7 +224,7 @@ int wifi_send_pkt_freedom(uint8 *buf, int len, bool sys_seq);
 首先通过插入ESP8266并给它电源启动ESP8266。
 
 扫描Wi-Fi网络并连接到 `pwned`。 密码是 `deauther`。
-一旦连接，您可以打开浏览器，然后转到 `192.168.4.1`。
+一旦连接, 您可以打开浏览器, 然后转到 `192.168.4.1`。
 
 您现在可以扫描网络...
 ![webinterface AP scanner](https://raw.githubusercontent.com/spacehuhn/esp8266_deauther/master/screenshots/web_screenshot_1.JPG)
@@ -231,12 +232,12 @@ int wifi_send_pkt_freedom(uint8 *buf, int len, bool sys_seq);
 扫描客户端设备...
 ![webinterface client scanner](https://raw.githubusercontent.com/spacehuhn/esp8266_deauther/master/screenshots/web_screenshot_2.JPG)
 
-注意：扫描ESP8266将关闭其接入点，因此您可能需要进行设置并手动重新连接到Wi-Fi网络！
+注意: 扫描ESP8266将关闭其接入点, 因此您可能需要进行设置并手动重新连接到Wi-Fi网络！
 
 ...并开始不同的攻击。
 ![webinterface attack menu](https://raw.githubusercontent.com/spacehuhn/esp8266_deauther/master/screenshots/web_screenshot_3.JPG)
 
-欲了解更多信息，请阅读 [FAQ](https://github.com/spacehuhn/esp8266_deauther/wiki/FAQ).  
+欲了解更多信息, 请阅读 [FAQ](https://github.com/spacehuhn/esp8266_deauther/wiki/FAQ).  
 
 ## 许可证 
 
