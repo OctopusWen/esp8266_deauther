@@ -11,23 +11,23 @@
 <b>支持我和我的项目请购买一个 <a href="https://github.com/spacehuhn/esp8266_deauther/#supported-devices">官方的 esp8266 deauther 开发板</a>.<br/>或者在<a href="https://patreon.com/spacehuhn" target="_blank">patreon.com/spacehuhn</a>成为我的顾客.</b>
 </p>
 
-## Contents
-- [Introduction](#introduction)
-  - [What it is and how it works](#what-it-is-and-how-it-works)
-  - [How to protect yourself against it](#how-to-protect-yourself-against-it)
-- [Disclaimer](#disclaimer)
-- [Supported Devices](#supported-devices)
-- [Installation](#installation)
-  - [Uploading the bin files](#uploading-the-bin-files)  
-  - [Compiling the source with Arduino](#compiling-the-source-with-arduino)
-  - [Adding an OLED display](#adding-an-oled-display)
-- [How to use it](#how-to-use-it)
+## 目录
+- [Introduction](#介绍)
+  - [What it is and how it works](#它是什么以及如何使用它)
+  - [How to protect yourself against it](#如何保护自己防御它的攻击)
+- [Disclaimer](#免责声明)
+- [Supported Devices](#支持的设备)
+- [Installation](#安装)
+  - [Uploading the bin files](#上传bin二进制程序 )  
+  - [Compiling the source with Arduino](#在ArduinoIDE编译源码)
+  - [Adding an OLED display](#添加一个OLED显示屏)
+- [How to use it](#如何使用)
 - [FAQ](https://github.com/spacehuhn/esp8266_deauther/wiki/FAQ)
-- [License](#license)
-- [Sources and additional links](#sources-and-additional-links)
-  - [Custom Design Versions](#custom-design-versions)
-  - [Videos](#videos)
-  - [Sources](#sources)
+- [License](#许可证)
+- [Sources and additional links](#来源和附加链接)
+  - [Custom Design Versions](#定制设计版本)
+  - [Videos](#视频)
+  - [Sources](#来源)
 
 ## 介绍
 
@@ -271,7 +271,7 @@ int wifi_send_pkt_freedom(uint8 *buf, int len, bool sys_seq);
 
 [![WiFi Jammers vs Deauthers | What's The Difference?](https://img.youtube.com/vi/6m2vY2HXU60/0.jpg)](https://www.youtube.com/watch?v=6m2vY2HXU60)  
 
-### 源码
+### 来源
 
 deauth attack: https://en.wikipedia.org/wiki/Wi-Fi_deauthentication_attack
 
