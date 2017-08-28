@@ -12,22 +12,22 @@
 </p>
 
 ## 目录
-- [Introduction](#介绍)
-  - [What it is and how it works](#它是什么以及如何使用它)
-  - [How to protect yourself against it](#如何保护自己防御它的攻击)
-- [Disclaimer](#免责声明)
-- [Supported Devices](#支持的设备)
-- [Installation](#安装)
-  - [Uploading the bin files](#上传bin二进制程序 )  
-  - [Compiling the source with Arduino](#在ArduinoIDE编译源码)
-  - [Adding an OLED display](#添加一个OLED显示屏)
-- [How to use it](#如何使用)
+- [介绍](#介绍)
+  - [它是什么以及如何使用它](#它是什么以及如何使用它)
+  - [如何保护自己防御它的攻击](#如何保护自己防御它的攻击)
+- [免责声明](#免责声明)
+- [支持的设备](#支持的设备)
+- [安装](#安装)
+  - [上传bin二进制程序](#上传bin二进制程序)  
+  - [在ArduinoIDE编译源码](#在ArduinoIDE编译源码)
+  - [添加一个OLED显示屏](#添加一个OLED显示屏)
+- [如何使用](#如何使用)
 - [FAQ](https://github.com/spacehuhn/esp8266_deauther/wiki/FAQ)
-- [License](#许可证)
-- [Sources and additional links](#来源和附加链接)
-  - [Custom Design Versions](#定制设计版本)
-  - [Videos](#视频)
-  - [Sources](#来源)
+- [许可证](#许可证)
+- [来源和附加链接](#来源和附加链接)
+  - [定制设计版本](#定制设计版本)
+  - [视频](#视频)
+  - [来源](#来源)
 
 ## 介绍
 
