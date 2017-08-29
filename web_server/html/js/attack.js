@@ -17,7 +17,7 @@ function getResults() {
     var res = JSON.parse(responseText);
     var aps = "";
     var clients = "";
-    var tr = "<tr><th>Attack</th><th>Status</th><th>Start/Stop</th></tr>";
+    var tr = "<tr><th>攻击</th><th>状态</th><th>开始/停止</th></tr>";
     for (var i = 0; i < res.aps.length; i++) aps += "<li>" + escapeHTML(res.aps[i]) + "</li>";
     for (var i = 0; i < res.clients.length; i++) clients += "<li>" + escapeHTML(res.clients[i]) + "</li>";
 
@@ -34,8 +34,8 @@ function getResults() {
       tr += "<td>" + res.attacks[i].name + "</td>";
       if (res.attacks[i].status == "ready") tr += "<td class='green status' id='status"+i+"'>" + res.attacks[i].status + "</td>";
       else tr += "<td class='red status' id='status"+i+"'>" + res.attacks[i].status + "</td>";
-      if (res.attacks[i].running) tr += "<td><button class='select' onclick='startStop(" + i + ")'>stop</button></td>";
-      else tr += "<td><button class='select' onclick='startStop(" + i + ")'>start</button></td>";
+      if (res.attacks[i].running) tr += "<td><button class='select' onclick='startStop(" + i + ")'>停止</button></td>";
+      else tr += "<td><button class='select' onclick='startStop(" + i + ")'>开始</button></td>";
 
       tr += "</tr>";
     }
@@ -65,7 +65,7 @@ function getResults() {
 
 function startStop(num) {
   getResponse("attackStart.json?num=" + num, function(responseText) {
-	getE("status"+num).innerHTML = "loading";
+	getE("status"+num).innerHTML = "读取中";
     if (responseText == "true") getResults();
     else showMessage("attackStart.json 响应错误");
   });
@@ -75,7 +75,7 @@ function addSSID() {
 	
 	var _ssidName = ssid.value;
 	if(_ssidName.length > 0){
-		if(data.length >= 64) showMessage("SSID list full :(", 2500);
+		if(data.length >= 64) showMessage("SSID 列表已满 :(", 2500);
 		else{
 			saved.innerHTML = "";
 			getResponse("addSSID.json?ssid=" + _ssidName + "&num="+num.value + "&enc=" + enc.checked, getResults);
@@ -101,11 +101,11 @@ function clearSSID() {
   getResponse("clearSSID.json", getResults);
 }
 function saveSSID() {
-  saved.innerHTML = "saved";
+  saved.innerHTML = "已保存";
   getResponse("saveSSID.json", getResults);
 }
 function resetSSID() {
-  saved.innerHTML = "saved";
+  saved.innerHTML = "已保存";
   getResponse("resetSSID.json", getResults);
 }
 function random(){

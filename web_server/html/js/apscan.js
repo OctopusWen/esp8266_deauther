@@ -42,7 +42,7 @@ function getResults() {
 		
     var tr = '';
     if (res.aps.length > 0) {
-		tr += '<tr><th>Ch</th><th>SSID</th><th> </th><th>RSSI</th><th>选择</th></tr>';
+		tr += '<tr><th>信道</th><th>SSID</th><th> </th><th>强度</th><th>选择</th></tr>';
 	}	
 	
     for (var i = 0; i < res.aps.length; i++) {
@@ -61,10 +61,10 @@ function getResults() {
 	  tr += '<td><div class="meter_background"> <div class="meter_forground '+_color+'" style="width: '+_width+'%;"><div class="meter_value">' + res.aps[i].r + '</div></div> </div></td>';
 
       if (res.aps[i].se) {
-        tr += '<td><button class="select" onclick="select(' + res.aps[i].i + ')">deselect</button></td>';
+        tr += '<td><button class="select" onclick="select(' + res.aps[i].i + ')">取消选择</button></td>';
         apMAC.innerHTML = res.aps[i].m;
       }
-      else tr += '<td><button class="select" onclick="select(' + res.aps[i].i + ')">select</button></td>';
+      else tr += '<td><button class="select" onclick="select(' + res.aps[i].i + ')">选择</button></td>';
       tr += '</tr>';
     }
     table.innerHTML = tr;

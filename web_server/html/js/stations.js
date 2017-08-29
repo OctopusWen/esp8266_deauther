@@ -35,7 +35,7 @@ function getResults() {
     clientsFound.innerHTML = res.clients.length;
 
     var tr = '';
-    if (res.clients.length > 0) tr += '<tr><th>Pkts</th><th>Name</th><th>MAC</th><th>AP</th><th>Select</th></tr>';
+    if (res.clients.length > 0) tr += '<tr><th>Pkts</th><th>名称</th><th>MAC地址</th><th>Wi-Fi</th><th>选择</th></tr>';
 	
     for (var i = 0; i < res.clients.length; i++) {
 
@@ -43,13 +43,13 @@ function getResults() {
       else tr += '<tr>';
       tr += '<td>' + res.clients[i].p + '</td>';
       if(res.clients[i].l >= 0) tr += '<td>' + escapeHTML(res.clients[i].n) + ' <a onclick="editNameList(' + res.clients[i].l + ')"></a></td>';
-	  else tr += '<td><a onclick="setName(' + res.clients[i].i + ')">set</a></td>';
+	  else tr += '<td><a onclick="setName(' + res.clients[i].i + ')">设置</a></td>';
       if(res.clients[i].v.length > 1) tr += '<td>' + res.clients[i].v + res.clients[i].m.substring(8, 20) + '</td>';
 	  else tr += '<td>' + res.clients[i].m + '</td>';
       tr += '<td>' + escapeHTML(res.clients[i].a) + '</td>';
 
-      if (res.clients[i].s == 1) tr += '<td><button class="marginNull select" onclick="select(' + res.clients[i].i + ')">deselect</button></td>';
-      else tr += '<td><button class="marginNull select" onclick="select(' + res.clients[i].i + ')">select</button></td>';
+      if (res.clients[i].s == 1) tr += '<td><button class="marginNull select" onclick="select(' + res.clients[i].i + ')">取消选择</button></td>';
+      else tr += '<td><button class="marginNull select" onclick="select(' + res.clients[i].i + ')">选择</button></td>';
 
       tr += '</tr>';
     }
@@ -57,15 +57,15 @@ function getResults() {
 	
 	clientNames.innerHTML = res.nameList.length + "/50";
 
-    var tr = '<tr><th>MAC</th><th>Name</th><th>Del.</th><th>Add</th></tr>';
+    var tr = '<tr><th>MAC地址</th><th>名称</th><th>Del.</th><th>添加</th></tr>';
 
     for (var i = 0; i < res.nameList.length; i++) {
 
       tr += '<tr>';
       tr += '<td>' + res.nameList[i].m + '</td>';
-      tr += '<td>' + escapeHTML(res.nameList[i].n) + ' <a onclick="editNameList(' + i + ')">edit</a></td>';
+      tr += '<td>' + escapeHTML(res.nameList[i].n) + ' <a onclick="editNameList(' + i + ')">编辑</a></td>';
       tr += '<td><button class="marginNull button-warn" onclick="deleteName(' + i + ')">x</button></td>';
-	  tr += '<td><button class="marginNull button-primary" onclick="add(' + i + ')">add</button></td>';
+	  tr += '<td><button class="marginNull button-primary" onclick="add(' + i + ')">添加</button></td>';
       tr += '</tr>';
     }
 
