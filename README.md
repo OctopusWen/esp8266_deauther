@@ -239,7 +239,7 @@ int wifi_send_pkt_freedom(uint8 *buf, int len, bool sys_seq);
 
 欲了解更多信息, 请阅读 [FAQ](https://github.com/spacehuhn/esp8266_deauther/wiki/FAQ).  
 
-## 许可证 
+## 许可证
 
 该软件根据麻省理工学院许可证获得许可。 请参阅 [license file](LICENSE) 以了解详情.
 
