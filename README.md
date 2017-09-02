@@ -12,6 +12,7 @@
 </p>
 
 ## 目录
+- [分支](#分支)
 - [介绍](#介绍)
   - [它是什么以及如何使用它](#它是什么以及如何使用它)
   - [如何保护自己防御它的攻击](#如何保护自己防御它的攻击)
@@ -28,6 +29,12 @@
   - [定制设计版本](#定制设计版本)
   - [视频](#视频)
   - [来源](#来源)
+
+
+## 分支
+**主分支** [spacehuhn](https://github.com/spacehuhn): [spacehuhn/esp8266_deauther](https://github.com/spacehuhn/esp8266_deauther)
+**中文分支** [xiaoyu2016](https://github.com/xiaoyu2016): [xiaoyu2016/esp8266_deauther](https://github.com/xiaoyu2016/esp8266_deauther)
+
 
 ## 介绍
 
